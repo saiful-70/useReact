@@ -1,18 +1,13 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { TaskContext } from "./Content";
 
 const IncompleteTaskList = ({ id, task }) => {
-  const { tasks, setTasks, completedTasks, setCompletedTasks } =
-    useContext(TaskContext);
+  const { tasks, setTasks, setCompletedTasks } = useContext(TaskContext);
 
   const handleChange = () => {
     setCompletedTasks((arr) => [...arr, tasks[id]]);
     setTasks(tasks.filter((el, index) => index !== id));
   };
-
-  useEffect(() => {
-    localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
-  }, [completedTasks]);
 
   return (
     <>
@@ -28,7 +23,6 @@ const IncompleteTaskList = ({ id, task }) => {
           onChange={handleChange}
         />
       </li>
-      {/* {checked ? tasks.splice(id, 1) : null} */}
     </>
   );
 };
