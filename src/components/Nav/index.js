@@ -17,7 +17,7 @@ const Nav = () => {
             {logoText}
           </h1>
         </div>
-        <a href="/" title="Source Code">
+        <a href="https://github.com/saiful-70/useReact" title="Source Code">
           <BsGithub className="text-gray-700" />
         </a>
       </div>
