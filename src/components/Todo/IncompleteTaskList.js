@@ -1,13 +1,18 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { TaskContext } from "./Content";
 
 const IncompleteTaskList = ({ id, task }) => {
-  const { tasks, setTasks, setCompletedTasks } = useContext(TaskContext);
+  const { tasks, setTasks, completedTasks, setCompletedTasks } =
+    useContext(TaskContext);
 
-  const handleChange = (e) => {
+  const handleChange = () => {
     setCompletedTasks((arr) => [...arr, tasks[id]]);
     setTasks(tasks.filter((el, index) => index !== id));
   };
+
+  useEffect(() => {
+    localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
+  }, [completedTasks]);
 
   return (
     <>

@@ -6,8 +6,13 @@ import TodoBox from "./TodoBox";
 export const TaskContext = createContext(null);
 
 const Content = () => {
-  const [tasks, setTasks] = useState([]);
-  const [completedTasks, setCompletedTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks") || "[]")
+  );
+
+  const [completedTasks, setCompletedTasks] = useState(
+    JSON.parse(localStorage.getItem("completedTasks") || "[]")
+  );
   return (
     <main className="container mx-auto mt-11 flex-center flex-col">
       <TaskContext.Provider

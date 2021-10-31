@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 
 import { TaskContext } from "./Content";
 
 const AddTask = () => {
   const [value, setValue] = useState("");
-  const { setTasks } = useContext(TaskContext);
+  const { tasks, setTasks } = useContext(TaskContext);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -15,6 +15,10 @@ const AddTask = () => {
     setTasks((arr) => [...arr, value]);
     setValue("");
   };
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <form className="w-4/6 flex-center" onSubmit={handleSubmit}>
@@ -27,9 +31,6 @@ const AddTask = () => {
         onChange={handleChange}
         value={value}
       />
-      {/* <button className="btn" type="submit" onSubmit={handleSubmit}>
-        Add
-      </button> */}
     </form>
   );
 };
