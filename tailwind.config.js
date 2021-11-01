@@ -14,8 +14,8 @@ module.exports = {
         },
       },
 
-      blur: {
-        xs: "2px",
+      backgroundImage: {
+        todo: "linear-gradient(to bottom right, rgba(252, 165, 165, 0.8), rgba(185, 28, 28, 0.7)), url('/src/assets/images/todo_demo.png')",
       },
     },
   },
