@@ -1,0 +1,7 @@
+.todoBg {
+  background-image: linear-gradient(to bottom right, rgba(252, 92, 101, 1)),
+    rgba(235, 59, 90, 1), url(../assets/images/todo_demo.png);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}

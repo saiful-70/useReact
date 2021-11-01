@@ -6,7 +6,7 @@ const Content = () => {
       <div className="w-full mx-auto h-full grid grid-cols-5 grid-rows-5 gap-3">
         <Card
           classes={{
-            div: "from-red-300 to-red-700 col-span-3 row-span-3",
+            div: "from-red-300 to-red-700  col-span-3 row-span-3",
             button: "bg-red-500 active:bg-red-700",
           }}
           link="/todo"
