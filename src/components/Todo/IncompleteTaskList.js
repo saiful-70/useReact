@@ -12,7 +12,7 @@ const IncompleteTaskList = ({ id, task }) => {
   return (
     <>
       <li className="flex-between w-full my-3">
-        <p className="inline-block text-left">
+        <p className="inline-block text-left border-b border-red-700">
           <span>{id + 1}. </span>
           {task}
         </p>
