@@ -19,9 +19,9 @@ const Content = () => {
             div: "from-green-300 to-green-700 row-span-2 col-span-2",
             button: "bg-green-500 active:bg-green-700",
           }}
-          link="/"
-          btnText="upcoming"
-          pText="Upcoming event"
+          link="/slider"
+          btnText="Slider"
+          pText="A basic slider"
         />
         <Card
           classes={{
