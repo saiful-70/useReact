@@ -3,6 +3,7 @@ import Error from "./components/Error";
 
 import Main from "./components/Main";
 import Todo from "./components/Todo";
+import Slider from "./components/Slider";
 
 const CreateRoutes = () => {
   return (
@@ -10,6 +11,7 @@ const CreateRoutes = () => {
       <Switch>
         <Route exact path="/" component={Main} />
         <Route exact path="/todo" component={Todo} />
+        <Route exact path="/slider" component={Slider} />
         <Route exact component={Error} />
       </Switch>
     </Router>
