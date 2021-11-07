@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { BsArrowLeftSquareFill, BsArrowRightSquareFill } from "react-icons/bs";
 
@@ -32,7 +32,6 @@ const Slider = () => {
     } else if (index === 0) {
       setIndex(images.length - 1);
     }
-    console.log(index);
   };
 
   const handleForward = () => {
@@ -41,7 +40,6 @@ const Slider = () => {
     } else if (index === images.length - 1) {
       setIndex(0);
     }
-    console.log(index);
   };
 
   return (
