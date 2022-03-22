@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Error from "./components/Error";
 
 import Main from "./components/Main";
-import Todo from "./components/Todo";
-import Slider from "./components/Slider";
+import Todo from "./components/Todo/index";
+import Slider from "./components/Slider/index";
 
 const CreateRoutes = () => {
   return (
